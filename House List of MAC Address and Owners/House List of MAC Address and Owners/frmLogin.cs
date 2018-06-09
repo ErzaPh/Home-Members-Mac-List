@@ -22,6 +22,7 @@ namespace House_List_of_MAC_Address_and_Owners
             oledbcon.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\OwnerandMacAddress.accdb;";
 
         }
+       
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -54,6 +55,7 @@ namespace House_List_of_MAC_Address_and_Owners
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            frmMain frmmain = new frmMain();
             OleDbDataReader oledbdr;
             OleDbCommand oledbcmd;
             try
@@ -71,6 +73,9 @@ namespace House_List_of_MAC_Address_and_Owners
                 {
                     MessageBox.Show("Access Granted Admin", "Notification", MessageBoxButtons.OK);
                     oledbcon.Close();
+                    frmmain.Show();
+                    this.Hide();
+                    
                 }
                 else if (oledbdr.HasRows == false)
                 {
@@ -87,6 +92,8 @@ namespace House_List_of_MAC_Address_and_Owners
                     {
                         MessageBox.Show("Access Granted User", "Notification", MessageBoxButtons.OK);
                         oledbcon.Close();
+                        frmmain.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -107,6 +114,54 @@ namespace House_List_of_MAC_Address_and_Owners
         {
             txtbxusername.Clear();
             txtbxuserpass.Clear();
+        }
+        bool mousedown;
+        int mousx = 0;
+        int mousy = 0;
+        private void frmLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+          //  mousedown = true;
+            
+        }
+
+        private void frmLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+           // if (mousedown)
+          //  {
+          //      mousx = MousePosition.X - 200;
+          //      mousy = MousePosition.Y - 40;
+           //     this.SetDesktopLocation(mousx, mousy);
+           // }
+        }
+
+        private void frmLogin_MouseUp(object sender, MouseEventArgs e)
+        {
+           // mousedown = false;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousedown = true;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mousedown)
+            {
+                mousx = MousePosition.X - 165 ;
+                mousy = MousePosition.Y - 10;
+                this.SetDesktopLocation(mousx, mousy);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mousedown = false;
+        }
+
+        private void btnLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
