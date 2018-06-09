@@ -18,9 +18,9 @@ namespace House_List_of_MAC_Address_and_Owners
         public frmLogin()
         {
             InitializeComponent();
-            
-            oledbcon.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\OwnerandMacAddress.accdb;";
 
+            //  oledbcon.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\OwnerandMacAddress.accdb;";
+            oledbcon = new OleDbConnection(ConString.connect);
         }
        
 
@@ -40,17 +40,17 @@ namespace House_List_of_MAC_Address_and_Owners
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            try
-            {
+          //  try
+          //  {
                 
-                oledbcon.Open();
-                MessageBox.Show("Connection Open", "Notification", MessageBoxButtons.OK);
-                oledbcon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex);
-            }
+          //      oledbcon.Open();
+          //      MessageBox.Show("Connection Open", "Notification", MessageBoxButtons.OK);
+          //      oledbcon.Close();
+          //  }
+          //  catch (Exception ex)
+         //   {
+         //       MessageBox.Show("Error " + ex);
+          //  }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -29,3 +29,4 @@ C:\Users\John\Documents\GitHub\Home-Members-Mac-List\House List of MAC Address a
 C:\Users\John\Documents\GitHub\Home-Members-Mac-List\House List of MAC Address and Owners\House List of MAC Address and Owners\obj\Debug\House_List_of_MAC_Address_and_Owners.Properties.Resources.resources
 C:\Users\John\Documents\GitHub\Home-Members-Mac-List\House List of MAC Address and Owners\House List of MAC Address and Owners\obj\Debug\House List of MAC Address and Owners.csproj.GenerateResource.Cache
 C:\Users\John\Documents\GitHub\Home-Members-Mac-List\House List of MAC Address and Owners\House List of MAC Address and Owners\obj\Debug\House_List_of_MAC_Address_and_Owners.usrcntrlAccounts.resources
+C:\Users\John\Documents\GitHub\Home-Members-Mac-List\House List of MAC Address and Owners\House List of MAC Address and Owners\obj\Debug\House List of MAC Address and Owners.csprojResolveAssemblyReference.cache

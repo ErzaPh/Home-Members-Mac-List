@@ -16,5 +16,10 @@ namespace House_List_of_MAC_Address_and_Owners
         {
             InitializeComponent();
         }
+
+        private void usrcntrlAccounts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
